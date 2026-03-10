@@ -1,5 +1,8 @@
 export const home = () => {
     const content = document.querySelector("#content");
+    while(content.firstChild) {
+        content.removeChild(content.firstChild);
+    }
 
     const title = document.createElement("h1");
     title.textContent = "Yathar-Mon Cafe";

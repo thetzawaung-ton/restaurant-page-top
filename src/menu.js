@@ -58,5 +58,72 @@ export const menu = () => {
 
     foodMenu.append( foodMenu1, foodMenu2, foodMenu3);
 
-    content.append(foodMenuTitle, foodMenu);
+    const beverageMenu = document.createElement("div");
+    beverageMenu.classList.add("beverage-menu");
+    const beverageMenuTitle = document.createElement("h2");  
+    beverageMenuTitle.textContent = "Beverages"; 
+
+    const teaAndCoffeeMenuContainer = document.createElement("div");
+    const teaAndCoffeeMenu = document.createElement("ul");
+    const teaAndCoffeeMenuTitle = document.createElement("h3");
+    teaAndCoffeeMenuTitle.textContent = "Tea & Coffee";
+
+    const teaAndCoffee = ["Normal Tea : 2000Ks", "Special Tea : 3000Ks", "Lemon Tea( Hot / Ice ) : 3000Ks",
+                        "Ice Coffee : 3000Ks", "May Myo Coffee : 3500Ks", "Instant Coffee : 2000Ks",];
+
+    teaAndCoffee.forEach(function(item) {
+        const li = document.createElement("li");
+        li.textContent = item;
+
+        teaAndCoffeeMenu.appendChild(li);
+    });
+    teaAndCoffeeMenuContainer.append(teaAndCoffeeMenuTitle, teaAndCoffeeMenu);
+
+    const sodaMenuContainer = document.createElement("div");
+    const sodaMenu = document.createElement("ul");
+    const sodaMenuTitle = document.createElement("h3");
+    sodaMenuTitle.textContent = "Soda";
+
+    const sodas = ["Blueberry Soda : 3500Ks", "Kiwi Soda : 3000Ks", "Lime Soda : 3000ks", "Strawberry Soda : 3500ks"];
+
+    sodas.forEach(function(item) {
+        const li = document.createElement("li");
+        li.textContent = item;
+
+        sodaMenu.appendChild(li);
+    });
+    sodaMenuContainer.append(sodaMenuTitle, sodaMenu);
+
+    const milkShakeMenuContainer = document.createElement("div");
+    const milkShakeMenu = document.createElement("ul");
+    const milkShakeMenuTitle = document.createElement("h3");
+    milkShakeMenuTitle.textContent = "Milkshake";
+
+    const milkShakes = ["Blueberry Milkshake : 5000Ks", "Chocolate Milkshake : 5000Ks", "Strawberry Milkshake : 5000ks", "Mango Milkshake : 4000ks"];
+
+    milkShakes.forEach(function(item) {
+        const li = document.createElement("li");
+        li.textContent = item;
+        milkShakeMenu.appendChild(li);
+    });
+    milkShakeMenuContainer.append(milkShakeMenuTitle, milkShakeMenu);
+
+    const smoothieMenuContainer = document.createElement("div");
+    const smoothieMenu = document.createElement("ul");
+    const smoothieMenuTitle = document.createElement("h3");
+    smoothieMenuTitle.textContent = "Smoothie";
+
+    const smoothies = ["Blueberry Smoothie : 5000Ks", "Kiwi Smoothie : 4000Ks",
+                         "Mango Smoothie : 4000ks", "Strawberry Smoothie : 5000ks"];
+
+    smoothies.forEach(function(item) {
+        const li = document.createElement("li");
+        li.textContent = item;
+
+        smoothieMenu.appendChild(li);
+    });
+    smoothieMenuContainer.append(smoothieMenuTitle, smoothieMenu);
+
+    beverageMenu.append(teaAndCoffeeMenuContainer, sodaMenuContainer, milkShakeMenuContainer, smoothieMenuContainer)
+    content.append(foodMenuTitle, foodMenu, beverageMenuTitle, beverageMenu);
 }

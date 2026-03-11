@@ -2,6 +2,7 @@ body {
     background-color: #FF8B5A;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
 }
@@ -45,7 +46,28 @@ li {
     padding: 0.5rem 0;
 }
 
+.food-menu {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 4rem;
+    row-gap: 1rem;
+    justify-content: center;
+}
+
+.food-menu > div {
+    padding: 1rem;
+    max-width: 40ch;
+    text-align: left;
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 4;
+}
+
+.food-menu > div * {
+    margin: 0;
+}
+
 img {
-    width: 150px;
-    height: 150px;
+    width: 10rem;
+    height: 10rem;
 }

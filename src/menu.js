@@ -9,6 +9,7 @@ export const menu = () => {
     }
 
     const foodMenu = document.createElement("div");
+    foodMenu.classList.add("food-menu");
     const foodMenuTitle = document.createElement("h2");
     foodMenuTitle.textContent = "Foods";
 
@@ -55,7 +56,7 @@ export const menu = () => {
 
     foodMenu3.append(foodMenu3Title, foodMenu3Description, foodMenu3Photo, foodMenu3Price);
 
-    foodMenu.append(foodMenuTitle, foodMenu1, foodMenu2, foodMenu3);
+    foodMenu.append( foodMenu1, foodMenu2, foodMenu3);
 
-    content.appendChild(foodMenu);
+    content.append(foodMenuTitle, foodMenu);
 }
